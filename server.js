@@ -15,9 +15,12 @@ mongoose
   .catch(err => console.error(err));
 
 // MiddleWare
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Controllers
 
 // Routes
 
 //Start Server
+app.listen(PORT, () => console.log("Server started on port", PORT));
