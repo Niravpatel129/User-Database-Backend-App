@@ -29,5 +29,23 @@ module.exports = {
       .catch(err => {
         res.json({ success: false, result: err });
       });
+  },
+  retrieve: (req, res) => {
+    UserModel.find()
+      .then(result => {
+        res.json({ success: true, result });
+      })
+      .catch(err => {
+        res.json({ success: false, result: err });
+      });
+  },
+  delete: (req, res) => {
+    UserModel.remove({ _id: req.body._id })
+      .then(result => {
+        res.json({ success: true, result });
+      })
+      .catch(err => {
+        res.json({ success: false, result: err });
+      });
   }
 };

@@ -23,7 +23,9 @@ const userController = require("./controllers/UserControl");
 
 // End point Routes
 app.post("/api/user/create", userController.create);
-app.post("/api/user/update", userController.update);
+app.put("/api/user/update", userController.update);
+app.get("/api/user/retrieve", userController.update);
+app.delete("/api/user/delete", userController.update);
 
 //Start Server
 app.listen(PORT, () => console.log("Server started on port", PORT));
