@@ -19,8 +19,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Controllers
+const userController = require("./controllers/UserControl");
 
 // Routes
+app.post("/api/user/create", userController.create);
 
 //Start Server
 app.listen(PORT, () => console.log("Server started on port", PORT));
