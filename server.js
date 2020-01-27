@@ -23,6 +23,7 @@ const userController = require("./controllers/UserControl");
 
 // End point Routes
 app.post("/api/user/create", userController.create);
+app.post("/api/user/update", userController.update);
 
 //Start Server
 app.listen(PORT, () => console.log("Server started on port", PORT));
