@@ -21,7 +21,7 @@ app.use(express.json());
 // Controllers
 const userController = require("./controllers/UserControl");
 
-// Routes
+// End point Routes
 app.post("/api/user/create", userController.create);
 
 //Start Server
